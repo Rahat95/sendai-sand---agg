@@ -1,0 +1,14 @@
+# robots.txt for https://sendai-sand-agg.vercel.app/
+
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Disallow private API endpoints or internal system paths
+Disallow: /api/internal/
+Disallow: /_next/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://sendai-sand-agg.vercel.app/sitemap.xml

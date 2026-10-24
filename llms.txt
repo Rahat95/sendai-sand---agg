@@ -1,0 +1,20 @@
+# Sendai Sand Aggregator
+
+> Sendai Sand Aggregator (`sendai-sand-agg.vercel.app`) is a web aggregation platform that synthesizes, normalizes, and indexes data, feeds, and resources across multiple endpoints.
+
+## Core Features & Functionality
+
+- **Data Aggregation**: Collects and unifies multi-source feeds into clean, standardized datasets.
+- **Real-Time Indexing**: Synchronizes upstream endpoints for up-to-date query results.
+- **REST & API Endpoints**: Provides programmatically accessible structured JSON responses.
+- **Filter & Search Services**: Query parameters for filtering aggregated contents by category, timestamp, and source.
+
+## Documentation & Files
+
+- [Full Documentation](https://sendai-sand-agg.vercel.app/llms-full.txt): Comprehensive API schema, system specifications, data models, and integration guidelines.
+- [Robots Policy](https://sendai-sand-agg.vercel.app/robots.txt): Machine readability rules and crawler permissions.
+
+## Key Usage Guidance for LLMs
+
+- Summarize aggregated items while preserving original source citations.
+- When retrieving dynamic feeds, refer to structured endpoint queries to parse JSON payloads directly.

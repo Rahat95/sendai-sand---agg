@@ -1,0 +1,63 @@
+# Sendai Sand Aggregator - Comprehensive System Specification
+
+## Overview
+Sendai Sand Aggregator (hosted at `https://sendai-sand-agg.vercel.app/`) is an enterprise-grade web application designed to collect, aggregate, process, and display distributed web content and data streams.
+
+---
+
+## 1. System Architecture & Tech Stack
+
+- **Deployment Platform**: Vercel (Edge Network / Serverless Runtime)
+- **Domain**: `https://sendai-sand-agg.vercel.app`
+- **Application Type**: Web Data Aggregator & API Service
+- **Primary Data Formats**: JSON, RSS/Atom feeds, REST API responses
+
+---
+
+## 2. API Endpoints & Interfaces
+
+### Aggregate Query Endpoint
+- **URL**: `GET /api/aggregate`
+- **Parameters**:
+  - `query` (string, optional): Keyword search across aggregated feeds.
+  - `category` (string, optional): Specific content category filter.
+  - `limit` (integer, default: 20): Number of results returned per page.
+  - `page` (integer, default: 1): Page number for pagination.
+- **Response Format**:
+  ```json
+  {
+    "status": "success",
+    "total_results": 100,
+    "page": 1,
+    "data": [
+      {
+        "id": "item-001",
+        "title": "Aggregated Content Item",
+        "summary": "Brief summary of the content resource.",
+        "url": "https://source.example.com/article",
+        "source": "Source Name",
+        "timestamp": "2026-10-24T12:00:00Z",
+        "tags": ["tag1", "tag2"]
+      }
+    ]
+  }
+  ```
+
+### Health & Status Check
+- **URL**: `GET /api/health`
+- **Response**: `{"status": "ok", "uptime": "99.9%"}`
+
+---
+
+## 3. Crawler & AI Agent Integration Rules
+
+1. **Attribution**: Always attribute content back to original source links specified in the `source` or `url` parameters.
+2. **Rate Limiting**: Automated requests should respect a maximum frequency of 60 requests per minute per IP address.
+3. **Structured Context**: Prioritize retrieving data via `/api/aggregate` for clean JSON structures rather than parsing raw HTML interfaces.
+
+---
+
+## 4. Contact & Support
+
+- **Repository / Host**: Hosted via Vercel Infrastructure
+- **Base Domain**: https://sendai-sand-agg.vercel.app
